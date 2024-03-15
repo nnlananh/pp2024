@@ -11,16 +11,6 @@ class Student:
     def add_mark(self, mark):
         self.marks.append(mark)
 
-    def calculate_average_gpa(self, course_list):
-        total_weighted_sum = 0
-        total_credits = 0
-        for mark, course in zip(self.marks, course_list):
-            total_weighted_sum += mark * course.credits
-            total_credits += course.credits
-        if total_credits == 0:
-            return 0
-        return total_weighted_sum / total_credits
-
 class Course:
     def __init__(self, ID, name, credits):
         self.ID = ID
@@ -34,8 +24,16 @@ class Mark:
 def floor_mark(mark):
     return math.floor(mark * 10) / 10
 
+def calculate_gpa(student, course_list):
+    weighted_sum = 0
+    total_credits = 0
+    for mark, course in zip(student.marks, course_list):
+        weighted_sum += mark * course.credits
+        total_credits += course.credits
+    return weighted_sum / total_credits
+
 def sort_students_by_gpa(student_list, course_list):
-    student_gpa = [(student, student.calculate_average_gpa(course_list)) for student in student_list]
+    student_gpa = [(student, calculate_gpa(student, course_list)) for student in student_list]
     sorted_students = sorted(student_gpa, key=lambda x: x[1], reverse=True)
     return [student[0] for student in sorted_students]
 
@@ -65,7 +63,7 @@ def main():
 
     print("Sorted student list by GPA descending:")
     for student in sorted_students:
-        print(f"Name: {student.name}, ID: {student.ID}, GPA: {student.calculate_average_gpa(course_list):.2f}")
+        print(f"Tên: {student.name}, ID: {student.ID}, GPA: {calculate_gpa(student, course_list):.2f}")
 
 if __name__ == "__main__":
     main()
