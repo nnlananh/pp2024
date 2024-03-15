@@ -1,0 +1,6 @@
+2ffd,fd,3.0
+fdf,f,2.0
+fdg,fd,3.0
+phy.1,Physics,3.0
+bio.1,Biology,4.0
+chem.1,Chemistry,4.0

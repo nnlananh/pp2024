@@ -1,0 +1,18 @@
+f,fd,23.0
+f,f,4.0
+f,fd,4.0
+f,fd,5.0
+f,f,3.0
+f,fd,4.0
+f,fd,5.0
+f,f,4.0
+f,fd,5.0
+Nguyen Nu Lan Anh,Physics,4.0
+Nguyen Nu Lan Anh,Biology,6.0
+Nguyen Nu Lan Anh,Chemistry,8.0
+Nguyen Minh Hoa,Physics,6.0
+Nguyen Minh Hoa,Biology,9.0
+Nguyen Minh Hoa,Chemistry,10.0
+Pham Thuy Linh,Physics,3.0
+Pham Thuy Linh,Biology,5.0
+Pham Thuy Linh,Chemistry,9.0
