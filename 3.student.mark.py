@@ -63,7 +63,7 @@ def main():
 
     print("Sorted student list by GPA descending:")
     for student in sorted_students:
-        print(f"Tên: {student.name}, ID: {student.ID}, GPA: {calculate_gpa(student, course_list):.2f}")
+        print(f"Student name: {student.name}, ID: {student.ID}, GPA: {calculate_gpa(student, course_list):.2f}")
 
 if __name__ == "__main__":
     main()
